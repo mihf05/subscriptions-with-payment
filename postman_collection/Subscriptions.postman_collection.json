@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "1f0acc4f-6e9b-48f9-a883-f26d53b24bd0",
+		"name": "Subscriptions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31974666"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Irfan hasan\",\r\n    \"email\": \"irfan@abc.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/auth/register",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"irfan@abc.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/auth/login",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscriptions subscribe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": " Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category\": \"Business\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/subscriptions/subscribe",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"subscriptions",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscriptions unsubscribe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": " Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category\": \"Business\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/subscriptions/unsubscribe",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"subscriptions",
+						"unsubscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscriptions list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": " Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseurl}}/api/subscriptions/list",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"subscriptions",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Content Feed",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": " Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseurl}}/api/content/feed",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"content",
+						"feed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Premium content plans",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": " Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseurl}}/api/payments/plans",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"payments",
+						"plans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payments create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": " Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"yearly\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/payments/create-link",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"payments",
+						"create-link"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payments confirm",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": " Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/payments/success?session_id=cs_test_a1axPa2A2Y4RCksWENIYSOw3of0vOmBuki86zZazhtMQSJr60T2GbU2jo3",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"payments",
+						"success"
+					],
+					"query": [
+						{
+							"key": "session_id",
+							"value": "cs_test_a1axPa2A2Y4RCksWENIYSOw3of0vOmBuki86zZazhtMQSJr60T2GbU2jo3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Premium content",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": " Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseurl}}/api/content/premium",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"content",
+						"premium"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": " Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
